@@ -23,7 +23,6 @@ module.exports = function(app){
 		var collection = db.get('usercollection');
 
 		collection.find({},{ limit : limit, skip: offset }, function(e, docs){
-			//res.render('blogpostlist.jade', {'posts' : docs});
 			res.send(docs);
 		});
 	});

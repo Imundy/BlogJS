@@ -10,8 +10,10 @@ var BlogPost = React.createClass({
 					<div className="post-image-container">
 						<img className="post-image" src={ imgSrc } />
 					</div>
-					<div className="title-text"> { this.props.title } </div>
-					<div className="subtitle-text"> { this.props.subtitle } </div>
+					<div className="title-text-container">
+						<div className="title-text"> { this.props.title } </div>
+						<div className="subtitle-text"> { this.props.subtitle } </div>
+					</div>
 				</div>
 				<div className="blog-content">
 					<div className="blog-post"> { this.props.content } </div>

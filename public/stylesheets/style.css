@@ -9,9 +9,11 @@ a {
 
 #NavBar {
     width: 100%;
-    position: absolute;
+    position: fixed;
     height: 50px;
     background: black;
+    top: 0;
+    z-index: 100;
 }
 
 .welcome {
@@ -24,6 +26,7 @@ a {
 .blog-title {
 	height: 500px;
     padding: 20px;
+    margin-top: 50px;
     background: black;
 }
 
@@ -38,16 +41,24 @@ a {
 	height: 100%;
 }
 
+.title-text-container {
+    position: relative;
+    margin: -500px auto 0;
+    max-width: 800px;
+    height: 500px;
+    background: rgba(0,0,0, 0.3);
+}
+
 .title-text {
     font-size: 50px;
     text-align: center;
-    margin-top: -250px;
+    padding-top: 200px;
     color: white;
 }
 
 .subtitle-text {
-    text-align: center;
-    margin: 0 auto 190px;
+	text-align: center;
+    margin: 30px auto;
     max-width: 600px;
     font-size: 24px;
     color: lightgray;
