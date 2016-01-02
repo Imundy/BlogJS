@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#NavBar {
+    width: 100%;
+    position: absolute;
+    height: 50px;
+    background: black;
+}
+
+.welcome {
+    color: whitesmoke;
+    line-height: 50px;
+    margin-left: 12px;
+    font-size: 16px;
+}
+
+.blog-title {
+	height: 500px;
+    padding: 20px;
+    background: black;
+}
+
+.post-image-container {
+    width: 800px;
+    height: 500px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.post-image {
+	height: 100%;
+}
+
+.title-text {
+    font-size: 50px;
+    text-align: center;
+    margin-top: -250px;
+    color: white;
+}
+
+.subtitle-text {
+    text-align: center;
+    margin: 0 auto 190px;
+    max-width: 600px;
+    font-size: 24px;
+    color: lightgray;
+}
+
+.blog-content {
+    max-width: 780px;
+    margin: 30px auto 20px;
+}
+
+.date {
+    max-width: 800px;
+    margin: auto;
+}

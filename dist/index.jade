@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+	head
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+		title= "BlogJs"
+	body
+		block header
+			div(class="header")
+				#NavBar
+					div(class="welcome")= "Welcome Traveller."
+		block content
+			include ./blogpostlist.jade
+			#ReactContent
+			script(src='/gulp-src/build.js')
+
+	

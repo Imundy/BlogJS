@@ -1,0 +1,11 @@
+each post in posts
+	block postheader
+		div(class="blog-title")
+			div(class="post-image-container")
+				img(class="post-image" src="/images/" + post.image)
+			div(class="title-text")= post.title
+			div(class="subtitle-text")= post.subtitle
+	block blogpost
+		div(class="blog-content")
+			div(class="blog-post")= post.content
+			div(class="date")= post.date
