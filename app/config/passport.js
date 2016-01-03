@@ -5,14 +5,15 @@ var db = monk('localhost:27017/BlogJS');
 
 module.exports = function(passport) {
     passport.serializeUser(function(user, done) {
-    	console.log(user);
-    	console.log(user.id);
-        done(null, user);
+    	console.log('serializing...'+user);
+    	console.log(user._id);
+        done(null, user._id);
     });
 
     passport.deserializeUser(function(id, done) {
+    	console.log('deserializing...' + id);
 		var collection = db.get('authenticatedUserCollection');
-        collection.find({ id : id },null, function(err, user) {
+        collection.findOne({ '_id' : id },null, function(err, user) {
             done(err, user);
         });
     });
