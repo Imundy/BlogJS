@@ -4,7 +4,7 @@ var ReactDOMServer = require('react-dom/server');
 ReactHome = React.createFactory(require('../components/ReactHome'));
 
 /* GET home page. */
-module.exports = function(app){
+module.exports = function(app, passport){
 	app.get('/', function(req, res, next) {
 		var db = req.db;
 		var collection = db.get('usercollection');
@@ -26,4 +26,21 @@ module.exports = function(app){
 			res.send(docs);
 		});
 	});
+
+	app.get('/magi', isLoggedIn, function(req, res, next) {
+		res.render('magi.jade');
+	});
+
+	app.get('/auth/google', passport.authenticate('google', { scope : ['profile', 'email'] }));
+
+    // the callback after google has authenticated the user
+    app.get('/auth/google/callback', passport.authenticate('google', { successRedirect : '/magi', failureRedirect : '/' }));
+
 }
+
+function isLoggedIn(req, res, next) {
+	if(req.isAuthenticated())
+		return next();
+
+	res.redirect('/');
+};

@@ -10,13 +10,16 @@
     "cookie-parser": "~1.3.5",
     "debug": "~2.2.0",
     "express": "~4.13.1",
+    "express-session": "^1.12.1",
+    "jade": "~1.11.0",
+    "mongodb": "~2.0.33",
+    "monk": "~1.0.1",
+    "morgan": "~1.6.1",
+    "passport": "^0.3.2",
+    "passport-google-oauth": "^0.2.0",
     "react": "~0.14.3",
     "react-dom": "~0.14.3",
-    "jade": "~1.11.0",
-    "morgan": "~1.6.1",
-    "serve-favicon": "~2.3.0",
-    "mongodb": "~2.0.33",
-    "monk": "~1.0.1"
+    "serve-favicon": "~2.3.0"
   },
   "devDependecies": {
     "browserify": "~3.20.0",

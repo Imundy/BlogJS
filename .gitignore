@@ -1,2 +1,4 @@
 data/*
 node_modules/*
+app/config/auth.js
+client_secret_316475882531-blblb2gj00ajft6otm9mfs4kee33vprl.apps.googleusercontent.com.json

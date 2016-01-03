@@ -4,13 +4,20 @@ var express = require('express'),
 logger = require('morgan'),
 mongo = require('mongodb'),
 monk = require('monk'),
-db = monk('localhost:27017/BlogJS')
+db = monk('localhost:27017/BlogJS'),
 path = require('path'),
 app = express(),
 port = 4444,
-bodyParser = require('body-parser');
+bodyParser = require('body-parser'),
+passport = require('passport'),
+session = require('express-session');
+
+require('./app/config/passport')(passport); 
 
 app.use(logger('dev'));
+app.use(session({secret:'longsecrethashpass'}));
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Make sure to include the JSX transpiler
 require('node-jsx').install({extension: '.jsx'});
@@ -29,7 +36,7 @@ app.use(function(req,res,next){
 });
 
 // Set up Routes for the application
-require('./app/routes/index.js')(app);
+require('./app/routes/index.js')(app, passport);
 
 //Route not found -- Set 404
 app.get('*', function(req, res) {
