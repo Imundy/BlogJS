@@ -1,0 +1,116 @@
+#NavBar {
+	position: inherit;
+}
+
+.magi-body {
+	pointer-events: none;
+	height: 710px;
+    width: 100%;
+	background: url("/images/magi.png") transparent no-repeat;
+	position: absolute;
+	z-index: 1;
+}
+
+.magi-body-base {
+	height: 710px;
+    width: 100%;
+	background: black;
+	position: absolute;
+	z-index: 0;
+}
+
+.welcome {
+	width: 1110px;
+	text-align: center;
+}
+
+.create {
+	left: 445px;
+    top: 102px;
+    height: 242px;
+    width: 242px;
+    position: absolute;
+}
+
+.update {
+	position: absolute;
+    height: 245px;
+    width: 245px;
+    left: 285px;
+    top: 346px;
+}
+
+.user {
+	position: absolute;
+    height: 245px;
+    width: 245px;
+    left: 603px;
+    top: 346px;
+}
+
+.create:before {
+	content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    background: linear-gradient(to bottom, rgb(0,255,255) , rgba(0, 100,200, 0.25) 90%);
+    z-index: 0;
+}
+
+.update:before {
+	content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    background: linear-gradient(135deg, rgb(0,255,255) , rgba(0, 100,200, 0.25) 90%);
+    transform: rotate(45deg);
+    z-index: 0;
+}
+
+.user:before {
+	content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    background: linear-gradient(135deg, rgb(0,255,255) , rgba(0, 100,200, 0.25) 90%);
+    transform: rotate(45deg);
+    z-index: 0;
+}
+
+.user:hover:before, .update:hover:before{
+	background: linear-gradient(135deg, rgb(255,0,0) , rgba(255, 255,0, 0.25) 90%);
+}
+
+.create:hover:before{
+	background: linear-gradient(to bottom, rgb(255,0,0) , rgba(255, 255,0, 0.25) 90%);
+}
+
+.create-text {
+    text-align: center;
+    width: 242px;
+    top: 90px;
+}
+
+.update-text {
+    top: 90px;
+    width: 242px;
+    text-align: center;
+
+}
+
+.user-text {
+    top: 90px;
+    width: 242px;
+    text-align: center;
+}
+
+.magi-text {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    z-index: 2;
+    position: absolute;
+}

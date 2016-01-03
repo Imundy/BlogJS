@@ -1,4 +1,19 @@
 doctype html
 html(lang="en")
+	head
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='/stylesheets/magi.css')
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+		title= "BlogJs"
 body
-	div(class="Welcome")= "Welcome to Magi"
+	div(class="header")
+		#NavBar
+			div(class="welcome")= "Welcome to Magi"
+	div(class="magi-body-base")
+	div(class="magi-body")
+	div(class="create")
+		div(class="create-text magi-text")= "CREATE"
+	div(class="update")
+		div(class="update-text magi-text")= "UPDATE"
+	div(class="user")
+		div(class="user-text magi-text")= "USERS"
